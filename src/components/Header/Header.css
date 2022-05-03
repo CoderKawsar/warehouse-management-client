@@ -1,0 +1,12 @@
+.header-nav {
+  height: 60px;
+  background-color: #3ba4f8;
+}
+
+.header-nav a.navbar-brand {
+  color: white;
+}
+
+.header-nav .navbar-nav a.nav-link {
+  color: white;
+}
