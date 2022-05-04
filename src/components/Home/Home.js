@@ -1,8 +1,10 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
 import useProducts from "../../hooks/useProducts";
 import Banner from "../Banner/Banner";
-import InventoryItem from "../InventoryItem/InventoryItem";
+import CustomerBenefits from "../CustomerBenefits/CustomerBenefits";
+import FooterTop from "../FooterTop/FooterTop";
+import InventoryItems from "../InventoryItems/InventoryItems";
+import StrengthHome from "../StrengthHome/StrengthHome";
 import "./Home.css";
 
 const Home = () => {
@@ -10,13 +12,10 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <Container className="mt-5">
-        <Row xs={1} sm={2} md={3} lg={3}>
-          {products.map((product) => (
-            <InventoryItem key={product._id} product={product} />
-          ))}
-        </Row>
-      </Container>
+      <InventoryItems products={products}></InventoryItems>
+      <StrengthHome></StrengthHome>
+      <CustomerBenefits></CustomerBenefits>
+      <FooterTop></FooterTop>
     </div>
   );
 };

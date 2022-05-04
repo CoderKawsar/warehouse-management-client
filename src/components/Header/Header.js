@@ -5,7 +5,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <Navbar className="header-nav" collapseOnSelect expand="lg">
+    <Navbar sticky="top" className="header-nav" collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand to="/" as={Link}>
           Deposito
@@ -13,7 +13,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#inventory">Inventory</Nav.Link>
+            <Nav.Link to="/inventory" as={Link}>
+              Inventory
+            </Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
           <Nav>
