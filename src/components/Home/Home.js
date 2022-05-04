@@ -12,6 +12,7 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
+      <h2 className="section-title">Inventory</h2>
       <InventoryItems products={products}></InventoryItems>
       <StrengthHome></StrengthHome>
       <CustomerBenefits></CustomerBenefits>

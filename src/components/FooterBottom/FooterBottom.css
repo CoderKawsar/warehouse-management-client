@@ -1,3 +1,5 @@
-footer {
+footer.footer-bottom {
   background-color: #0c1a32;
+  color: #b5b5c3;
+  text-align: center;
 }

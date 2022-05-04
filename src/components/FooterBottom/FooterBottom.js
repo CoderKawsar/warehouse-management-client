@@ -1,11 +1,10 @@
 import React from "react";
-
-import "./FooterBottom.js";
+import "./FooterBottom.css";
 
 const FooterBottom = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="footerBottom">
+    <footer className="footer-bottom">
       &copy; {currentYear} Deposito All Rights Reserved.
     </footer>
   );

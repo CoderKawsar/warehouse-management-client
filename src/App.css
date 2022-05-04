@@ -1,0 +1,38 @@
+* {
+  color: #172b4c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+p,
+li,
+a {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.section-title {
+  font-size: 34px;
+  position: relative;
+}
+
+.section-title span {
+  color: #6cbbfa;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 100px;
+  bottom: -10px;
+  left: 0px;
+  background-color: #6cbbfa;
+}
