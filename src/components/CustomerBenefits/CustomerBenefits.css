@@ -3,12 +3,17 @@
   width: 100%;
 }
 
+.customer-benefits.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .customer-benefits .col {
   padding: 0px;
 }
 
 .customer-benefits-left {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .customer-benefits-left h4 {

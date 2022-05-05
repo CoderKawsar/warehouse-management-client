@@ -36,3 +36,17 @@ a {
   left: 0px;
   background-color: #6cbbfa;
 }
+
+.my-btn {
+  background-color: #3ba4f8;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  color: #ececf7;
+}
+
+.my-btn:hover {
+  background-color: #2693ff;
+  color: white;
+  transition: 0.1s ease;
+}

@@ -6,7 +6,7 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import Header from "./components/Header/Header";
 import InventoryItemDetails from "./components/InventoryItemDetails/InventoryItemDetails";
-import FooterBottom from "./components/FooterBottom/FooterBottom";
+import FooterArea from "./components/FooterArea/FooterArea";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
       </Routes>
-      <FooterBottom></FooterBottom>
+      <FooterArea></FooterArea>
     </>
   );
 }

@@ -1,0 +1,93 @@
+.footer-top {
+  background-color: #0c1a32;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.footer-link {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-top p {
+  text-align: justify;
+}
+
+.footer-top p,
+.footer-link li {
+  color: #b5b5c3;
+  font-size: 14px;
+}
+
+.footer-link li svg,
+.location svg {
+  margin-right: 15px;
+}
+
+.footer-link li svg path {
+  fill: #fff;
+}
+
+.location svg path {
+  fill: #6cbbfa;
+}
+
+.social-icons div {
+  margin-right: 10px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.social-icons svg {
+  transform: scale(0.8);
+}
+
+.social-icons svg path {
+  fill: #fff;
+}
+
+.facebook-icon {
+  background-color: #2d4373;
+}
+
+.twitter-icon {
+  background-color: #0c85d0;
+}
+
+.linkedin-icon {
+  background-color: #0077b5;
+}
+
+.github-icon {
+  background-color: #fff;
+}
+
+.social-icons .github-icon svg path {
+  fill: #000;
+}
+
+.footer-form input[type="email"] {
+  height: 35px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  background-color: #0c1a32;
+  color: #b5b5c3;
+  text-align: center;
+  padding: 20px 0px;
+  border-top: 1px solid black;
+}
