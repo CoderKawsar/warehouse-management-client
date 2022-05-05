@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import Spinner from "../Spinner/Spinner";
 import "./Login.css";
 
 const Login = () => {
@@ -11,6 +12,10 @@ const Login = () => {
   let location = useLocation();
   let navigate = useNavigate();
   let from = location.state?.from?.pathname || "/";
+
+  if (loading) {
+    return <Spinner></Spinner>;
+  }
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -24,7 +29,9 @@ const Login = () => {
   }
   return (
     <div>
-      <h1>Login</h1>
+      <div className="d-flex justify-content-center">
+        <h2 className="center-title">Login</h2>
+      </div>
       <Form className="w-50 mx-auto" onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

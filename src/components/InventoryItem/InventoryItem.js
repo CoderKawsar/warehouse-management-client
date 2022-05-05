@@ -8,14 +8,23 @@ const InventoryItem = ({ product }) => {
   const detailLink = `/inventory/${_id}`;
   return (
     <Col>
-      <Card className="inventory-item">
+      <Card className="inventory-item rounded mb-3">
         <Card.Img height="200px" variant="top" src={img} />
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>{description}</Card.Text>
-          <Card.Text>Price: ${price}</Card.Text>
-          <Card.Text>Supplier: {supplier_name}</Card.Text>
-          <Link to={detailLink}>Details</Link>
+          <Card.Title>{name.substring(0, 70)}</Card.Title>
+          <Card.Text style={{ textAlign: "justify" }}>
+            <span>Details: </span>
+            {description.substring(0, 200)}...
+          </Card.Text>
+          <Card.Text>
+            <span>Price:</span> ${price}
+          </Card.Text>
+          <Card.Text>
+            <span>Supplier:</span> {supplier_name}
+          </Card.Text>
+          <Link to={detailLink} className="my-btn">
+            Manage
+          </Link>
         </Card.Body>
       </Card>
     </Col>

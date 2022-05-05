@@ -11,7 +11,9 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <h2 className="section-title">Inventory</h2>
+      <div className="d-flex justify-content-center">
+        <h2 className="center-title">Inventory</h2>
+      </div>
       <InventoryItems products={products}></InventoryItems>
       <StrengthHome></StrengthHome>
       <CustomerBenefits></CustomerBenefits>

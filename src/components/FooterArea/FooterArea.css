@@ -2,6 +2,7 @@
   background-color: #0c1a32;
   padding-top: 80px;
   padding-bottom: 50px;
+  margin-top: 60px;
 }
 
 .footer-link {
@@ -19,7 +20,7 @@
 }
 
 .footer-top p,
-.footer-link li {
+.footer-link li a {
   color: #b5b5c3;
   font-size: 14px;
 }
@@ -31,6 +32,10 @@
 
 .footer-link li svg path {
   fill: #fff;
+}
+
+.footer-link li a {
+  text-decoration: none;
 }
 
 .location svg path {
@@ -57,15 +62,31 @@
   background-color: #2d4373;
 }
 
+.facebook-icon:hover {
+  background-color: #2d53a7;
+}
+
 .twitter-icon {
   background-color: #0c85d0;
+}
+
+.twitter-icon:hover {
+  background-color: #0a95eb;
 }
 
 .linkedin-icon {
   background-color: #0077b5;
 }
 
+.linkedin-icon:hover {
+  background-color: #0297e7;
+}
+
 .github-icon {
+  background-color: rgb(243, 242, 242);
+}
+
+.github-icon:hover {
   background-color: #fff;
 }
 
@@ -76,7 +97,7 @@
 .footer-form input[type="email"] {
   height: 35px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-bottom: 12px;
   outline: none;
   border: none;

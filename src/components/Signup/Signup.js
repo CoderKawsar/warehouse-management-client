@@ -15,7 +15,9 @@ const Signup = () => {
   };
   return (
     <div>
-      <h2>Sign up</h2>
+      <div className="d-flex justify-content-center">
+        <h2 className="center-title">Signup</h2>
+      </div>
       <Form className="w-50 mx-auto" onSubmit={handleSignup}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

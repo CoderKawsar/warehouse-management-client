@@ -1,0 +1,8 @@
+.center-title {
+  width: fit-content;
+  font-size: 34px;
+  line-height: 55px;
+  text-align: center;
+  border-bottom: 5px solid #6cbbfa;
+  margin-top: 60px;
+}

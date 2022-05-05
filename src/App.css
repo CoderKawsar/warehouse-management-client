@@ -38,15 +38,19 @@ a {
 }
 
 .my-btn {
-  background-color: #3ba4f8;
+  background-color: #d4ecff;
+  color: #6cbbfa;
   padding: 8px 15px;
   border: none;
   border-radius: 4px;
-  color: #ececf7;
+}
+
+a.my-btn {
+  text-decoration: none;
 }
 
 .my-btn:hover {
-  background-color: #2693ff;
-  color: white;
+  background-color: #6cbbfa;
+  color: #ffffff;
   transition: 0.1s ease;
 }

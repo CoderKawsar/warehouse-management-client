@@ -1,5 +1,6 @@
 import React from "react";
 import "./FooterArea.css";
+import { Link } from "react-router-dom";
 import { Col, Row, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -34,24 +35,32 @@ const FooterArea = () => {
                 Cillum.
               </p>
             </Col>
-            <Col lg={2}>
+            <Col lg={2} className="ps-4">
               <h5 className="footer-title">Quick Link</h5>
               <ul className="footer-link">
                 <li>
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  Home
+                  <Link to="/">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  Inventory
+                  <Link to="/inventory">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                    Inventory
+                  </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  Login
+                  <Link to="/login">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                    Login
+                  </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  Signup
+                  <Link to="/signup">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                    Signup
+                  </Link>
                 </li>
               </ul>
             </Col>

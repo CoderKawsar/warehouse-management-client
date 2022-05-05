@@ -1,4 +1,26 @@
+.inventory-item {
+  height: 565px;
+}
+
+.inventory-item:hover {
+  box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 25%);
+}
+
 .inventory-item img {
   /* height: 200px; */
   padding: 20px;
+}
+
+.inventory-item .card-title {
+  margin-bottom: 20px;
+}
+
+.inventory-item .card-text span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+.inventory-item .my-btn {
+  position: absolute;
+  bottom: 10px;
 }
