@@ -54,3 +54,17 @@ a.my-btn {
   color: #ffffff;
   transition: 0.1s ease;
 }
+
+.btn-two {
+  color: white;
+  background-color: #37a3fc;
+  height: 35px;
+  border: none;
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-two:hover {
+  background-color: #1392fa;
+}
