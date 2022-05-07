@@ -14,7 +14,8 @@ const InventoryItem = ({ product }) => {
           <Card.Title>{name.substring(0, 70)}</Card.Title>
           <Card.Text style={{ textAlign: "justify" }}>
             <span>Details: </span>
-            {description.substring(0, 200)}...
+            {description.substring(0, 200)}
+            {description.length > 200 && " . . ."}
           </Card.Text>
           <Card.Text>
             <span>Price:</span> ${price}

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./InventoryItemDetails.css";
 
 const InventoryItemDetails = () => {
@@ -13,7 +14,44 @@ const InventoryItemDetails = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
-  }, [url]);
+  }, [url, product]);
+
+  const handleQuantityUpdate = (newQuantity) => {
+    const updatedProduct = {
+      ...product,
+      quantity: newQuantity,
+    };
+
+    fetch(url, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
+  };
+
+  const handleRestock = (event) => {
+    event.preventDefault();
+    const restockInput = parseInt(event.target.restock.value);
+    const newQuantity = restockInput + product.quantity;
+    if (restockInput <= 0) {
+      toast("Please enter a valid amount");
+      return;
+    }
+
+    handleQuantityUpdate(newQuantity);
+    event.target.restock.value = "";
+    toast(`Restocked ${restockInput} items`);
+  };
+
+  const handleDelivered = (event) => {
+    event.preventDefault();
+    const newQuantity = product.quantity - 1;
+
+    handleQuantityUpdate(newQuantity);
+    toast("Delivered");
+  };
 
   return (
     <div className="inventory-item-details">
@@ -40,8 +78,13 @@ const InventoryItemDetails = () => {
               {product?.quantity}
             </p>
             <div className="d-flex justify-content-between align-items-center">
-              <button className="btn-two">Delivered</button>
-              <form className="d-flex align-items-center">
+              <button className="btn-two" onClick={handleDelivered}>
+                Delivered
+              </button>
+              <form
+                className="d-flex align-items-center"
+                onSubmit={handleRestock}
+              >
                 <input
                   type="number"
                   name="restock"
@@ -49,9 +92,10 @@ const InventoryItemDetails = () => {
                   placeholder="No. of items"
                 />
                 <input type="submit" value="Restock" className="btn-two" />
+                <ToastContainer />
               </form>
             </div>
-            <p className="mt-3">
+            <p className="mt-3" style={{ textAlign: "justify" }}>
               <b>Description: </b>
               {product?.description}
             </p>
