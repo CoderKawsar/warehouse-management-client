@@ -1,0 +1,15 @@
+.manage-inventory-page .center-title {
+  margin-top: 30px;
+}
+
+table tr td {
+  vertical-align: middle;
+}
+
+.delete-font {
+  cursor: pointer;
+}
+
+.delete-font path {
+  fill: rgb(252, 68, 12);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 import Banner from "../Banner/Banner";
 import CustomerBenefits from "../CustomerBenefits/CustomerBenefits";
@@ -11,10 +12,17 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div className="d-flex justify-content-center">
-        <h2 className="center-title">Inventory</h2>
+      <div className="home-inventory-section">
+        <div className="d-flex justify-content-center">
+          <h2 className="center-title">Inventory</h2>
+        </div>
+        <InventoryItems products={products}></InventoryItems>
+        <div className="d-flex justify-content-center">
+          <Link to="/manage-inventory" className="btn-two manage-inventory-btn">
+            Manage Inventories
+          </Link>
+        </div>
       </div>
-      <InventoryItems products={products}></InventoryItems>
       <StrengthHome></StrengthHome>
       <CustomerBenefits></CustomerBenefits>
     </div>

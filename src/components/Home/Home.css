@@ -6,3 +6,16 @@
   border-bottom: 5px solid #6cbbfa;
   margin-top: 60px;
 }
+
+.home-inventory-section {
+  margin-bottom: 60px;
+}
+
+.manage-inventory-btn {
+  text-decoration: none;
+  padding-top: 5px;
+}
+
+.manage-inventory-btn:hover {
+  color: white;
+}

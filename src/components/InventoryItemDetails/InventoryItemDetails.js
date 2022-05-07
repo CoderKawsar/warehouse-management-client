@@ -49,8 +49,12 @@ const InventoryItemDetails = () => {
     event.preventDefault();
     const newQuantity = product.quantity - 1;
 
-    handleQuantityUpdate(newQuantity);
-    toast("Delivered");
+    if (newQuantity >= 0) {
+      handleQuantityUpdate(newQuantity);
+      toast("Delivered");
+    } else {
+      toast("Not enough item to deliver");
+    }
   };
 
   return (

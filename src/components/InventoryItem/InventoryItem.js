@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import "./InventoryItem.css";
 
 const InventoryItem = ({ product }) => {
-  const { _id, name, price, description, img, supplier_name } = product;
+  const { _id, name, price, description, img, supplier_name, quantity } =
+    product;
   const detailLink = `/inventory/${_id}`;
   return (
     <Col>
@@ -12,13 +13,16 @@ const InventoryItem = ({ product }) => {
         <Card.Img height="200px" variant="top" src={img} />
         <Card.Body>
           <Card.Title>{name.substring(0, 70)}</Card.Title>
-          <Card.Text style={{ textAlign: "justify" }}>
+          <Card.Text style={{ textAlign: "justify", fontSize: "15px" }}>
             <span>Details: </span>
             {description.substring(0, 200)}
             {description.length > 200 && " . . ."}
           </Card.Text>
           <Card.Text>
             <span>Price:</span> ${price}
+          </Card.Text>
+          <Card.Text>
+            <span>Quantity:</span> {quantity}
           </Card.Text>
           <Card.Text>
             <span>Supplier:</span> {supplier_name}
