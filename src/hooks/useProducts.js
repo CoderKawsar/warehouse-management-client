@@ -11,7 +11,7 @@ const useProducts = (numberOfProduct) => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [url]);
-  return [products];
+  return [products, setProducts];
 };
 
 export default useProducts;

@@ -2,6 +2,10 @@
   margin-top: 30px;
 }
 
+.manage-inventory-page .btn-two:hover {
+  color: white;
+}
+
 table tr td {
   vertical-align: middle;
 }

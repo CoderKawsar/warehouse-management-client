@@ -5,19 +5,25 @@ import "./ManageInventory.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ManageInventory = () => {
-  const [products] = useProducts();
+  const [products, setProducts] = useProducts();
   let i = 1;
 
   const handleDelete = (id) => {
     const url = `http://localhost:5000/inventory/${id}`;
-    fetch(url, { method: "DELETE" })
+    fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
-        if (data.dataCount > 0) {
-          console.log("deleted");
-        }
+        toast("Deleted");
+        const remaining = products.filter((product) => product._id !== id);
+        setProducts(remaining);
       });
   };
   return (

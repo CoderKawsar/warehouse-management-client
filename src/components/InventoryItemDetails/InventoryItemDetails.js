@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { Link, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./InventoryItemDetails.css";
 
@@ -96,13 +96,18 @@ const InventoryItemDetails = () => {
                   placeholder="No. of items"
                 />
                 <input type="submit" value="Restock" className="btn-two" />
-                <ToastContainer />
               </form>
             </div>
             <p className="mt-3" style={{ textAlign: "justify" }}>
               <b>Description: </b>
               {product?.description}
             </p>
+            <Link
+              to="/manage-inventory"
+              className="btn-two manage-inventory-btn"
+            >
+              Manage Inventories
+            </Link>
           </Col>
         </Row>
       </Container>
