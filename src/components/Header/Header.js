@@ -20,22 +20,37 @@ const Header = () => {
             <Nav.Link to="/inventory" as={Link}>
               Inventory
             </Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link to="/blog" as={Link}>
+              Blog
+            </Nav.Link>
           </Nav>
           <Nav>
             {!user && (
-              <Nav.Link to="/login" as={Link}>
-                Login
-              </Nav.Link>
+              <>
+                <Nav.Link to="/login" as={Link}>
+                  Login
+                </Nav.Link>
+                <Nav.Link to="/signup" as={Link}>
+                  Signup
+                </Nav.Link>
+              </>
             )}
             {user && (
-              <Nav.Link to="/login" as={Link} onClick={() => signOut(auth)}>
-                Logout
-              </Nav.Link>
+              <>
+                <Nav.Link to="/manage-inventory" as={Link}>
+                  Manage Items
+                </Nav.Link>
+                <Nav.Link to="/add-inventory-item" as={Link}>
+                  Add Item
+                </Nav.Link>
+                <Nav.Link to="/my-inventory-items" as={Link}>
+                  My Items
+                </Nav.Link>
+                <Nav.Link to="/login" as={Link} onClick={() => signOut(auth)}>
+                  Logout
+                </Nav.Link>
+              </>
             )}
-            <Nav.Link to="/signup" as={Link}>
-              Signup
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -2,8 +2,11 @@ import React, { useRef } from "react";
 import { Form } from "react-bootstrap";
 import "./AddInventoryItem.css";
 import { toast } from "react-toastify";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const AddInventoryItem = () => {
+  const [user] = useAuthState(auth);
   let productName = useRef("");
   let productPrice = useRef("");
   let productQuantity = useRef("");
@@ -26,6 +29,7 @@ const AddInventoryItem = () => {
       supplier_name: productSupplier,
       description: productDescription,
       img: productImgUrl,
+      adderEmail: user.email,
     };
     fetch("http://localhost:5000/inventory", {
       method: "POST",

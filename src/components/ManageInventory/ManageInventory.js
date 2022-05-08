@@ -13,18 +13,22 @@ const ManageInventory = () => {
 
   const handleDelete = (id) => {
     const url = `http://localhost:5000/inventory/${id}`;
-    fetch(url, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        toast("Deleted");
-        const remaining = products.filter((product) => product._id !== id);
-        setProducts(remaining);
-      });
+    if (window.confirm("Do you really want to Delete?")) {
+      fetch(url, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          toast("Deleted");
+          const remaining = products.filter((product) => product._id !== id);
+          setProducts(remaining);
+        });
+    } else {
+      return;
+    }
   };
   return (
     <div className="manage-inventory-page">

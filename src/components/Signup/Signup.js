@@ -16,6 +16,7 @@ const Signup = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     createUserWithEmailAndPassword(email, password);
+    e.target.reset();
   };
   return (
     <div>

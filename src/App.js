@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Inventory from "./components/Inventory/Inentory";
 import Login from "./components/Login/Login";
+import Blog from "./components/Blog/Blog";
 import Signup from "./components/Signup/Signup";
 import Header from "./components/Header/Header";
 import InventoryItemDetails from "./components/InventoryItemDetails/InventoryItemDetails";
@@ -11,6 +12,7 @@ import RequireAuth from "./components/RequireAuth/RequireAuth";
 import ManageInventory from "./components/ManageInventory/ManageInventory";
 import AddInventoryItem from "./components/AddInventoryItem/AddInventoryItem";
 import { ToastContainer } from "react-toastify";
+import MyInventoryItems from "./components/MyInventoryItems/MyInventoryItems";
 
 function App() {
   return (
@@ -43,6 +45,15 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route
+          path="/my-inventory-items"
+          element={
+            <RequireAuth>
+              <MyInventoryItems />
+            </RequireAuth>
+          }
+        />
+        <Route path="/blog" element={<Blog />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
       </Routes>
