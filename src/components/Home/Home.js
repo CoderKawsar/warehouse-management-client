@@ -4,11 +4,12 @@ import useProducts from "../../hooks/useProducts";
 import Banner from "../Banner/Banner";
 import CustomerBenefits from "../CustomerBenefits/CustomerBenefits";
 import InventoryItems from "../InventoryItems/InventoryItems";
+import Spinner from "../Spinner/Spinner";
 import StrengthHome from "../StrengthHome/StrengthHome";
 import "./Home.css";
 
 const Home = () => {
-  const [products] = useProducts(6);
+  const [products, isLoading] = useProducts(6);
   return (
     <div>
       <Banner></Banner>
@@ -16,6 +17,7 @@ const Home = () => {
         <div className="d-flex justify-content-center">
           <h2 className="center-title">Inventory</h2>
         </div>
+        {isLoading && <Spinner />}
         <InventoryItems products={products}></InventoryItems>
         <div className="d-flex justify-content-center">
           <Link to="/manage-inventory" className="btn-two manage-inventory-btn">

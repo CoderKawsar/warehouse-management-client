@@ -49,7 +49,7 @@ const AddInventoryItem = () => {
       <div className="d-flex justify-content-center">
         <h2 className="center-title">Add Inventory Item</h2>
       </div>
-      <Form className="w-50 mx-auto" onSubmit={handleAddProduct}>
+      <Form className="mx-auto" onSubmit={handleAddProduct}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>
             <b>Porduct Name</b>

@@ -6,9 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import Spinner from "../Spinner/Spinner";
 
 const ManageInventory = () => {
-  const [products, setProducts] = useProducts();
+  const [products, isLoading, setProducts] = useProducts();
   let i = 1;
 
   const handleDelete = (id) => {
@@ -53,6 +54,13 @@ const ManageInventory = () => {
           </tr>
         </thead>
         <tbody>
+          {isLoading && (
+            <tr>
+              <td colSpan={7}>
+                <Spinner />
+              </td>
+            </tr>
+          )}
           {products.map((product) => (
             <tr key={product._id}>
               <td className="text-center">{i++}</td>

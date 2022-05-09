@@ -3,10 +3,25 @@
   background-color: #3ba4f8;
 }
 
+.header-nav .container {
+  padding: 0px;
+}
+
 .header-nav a.navbar-brand {
   color: white;
+  padding-left: 12px;
+}
+
+.navbar-toggler {
+  margin-right: 12px;
 }
 
 .header-nav .navbar-nav a.nav-link {
   color: white;
+}
+
+.navbar-collapse {
+  background-color: #3ba4f8;
+  padding-left: 12px;
+  width: 100%;
 }

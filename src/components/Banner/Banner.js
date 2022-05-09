@@ -11,25 +11,32 @@ const Banner = () => {
       <Carousel.Item>
         <img className="d-block w-100" src={bannerImg1} alt="First slide" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>C. J. Cherryh</h3>
+          <p>
+            Trade isn't about goods. Trade is about information. Goods sit in
+            the warehouse until information moves them.
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100" src={bannerImg2} alt="Second slide" />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Katharine Lee Bates</h3>
+          <p>
+            The life of Liverpool is commerce; it is a city of warehouses and
+            shops.
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100" src={bannerImg3} alt="Third slide" />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Sebastian Junger</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            Firemen don't talk about whether a burning warehouse is worth
+            saving.
           </p>
         </Carousel.Caption>
       </Carousel.Item>

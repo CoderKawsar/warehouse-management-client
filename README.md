@@ -13,6 +13,7 @@ It's a website to manage warehouse. Here you can manage your warehouse. You can 
 - /manage-inventory route is to manage inventory for authenticated users
 - /add-inventory-item route is to add inventory item
 - /my-inventory-items is to see all the inventory items added by a specific user
+- /blog route have the provided question answers
 - /login route is to login users
 - /signup route is to register new users
 

@@ -7,11 +7,20 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const StrengthHome = () => {
   return (
-    <Row md={2} lg={2} className="strength-home align-items-center">
-      <Col>
+    <Row className="strength-home align-items-center">
+      <Col
+        xs={{ span: 12, order: "first" }}
+        md={{ span: 6, order: "first" }}
+        lg={{ span: 6, order: "first" }}
+      >
         <img src={srenghtImg} alt="Strength" />
       </Col>
-      <Col>
+      <Col
+        xs={{ span: 12, order: "last" }}
+        md={{ span: 6, order: "last" }}
+        lg={{ span: 6, order: "last" }}
+        className="p-0"
+      >
         <div className="right-strength">
           <h2 className="section-title">
             Our <span>Strength</span>
@@ -23,23 +32,27 @@ const StrengthHome = () => {
           <ul>
             <li>
               <FontAwesomeIcon icon={faCheck} />
-              lorem13
+              Teamwork
             </li>
             <li>
               <FontAwesomeIcon icon={faCheck} />
-              lorem13
+              Computer Literacy and Technology Skills
             </li>
             <li>
               <FontAwesomeIcon icon={faCheck} />
-              lorem13
+              Problem-solving Skills
             </li>
             <li>
               <FontAwesomeIcon icon={faCheck} />
-              lorem13
+              Flexibility
             </li>
             <li>
               <FontAwesomeIcon icon={faCheck} />
-              lorem13
+              Punctuality
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faCheck} />
+              Integrity
             </li>
           </ul>
         </div>

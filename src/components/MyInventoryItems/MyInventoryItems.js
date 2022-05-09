@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Accordion, Spinner, Table } from "react-bootstrap";
+import { Accordion, Table } from "react-bootstrap";
 import "./MyInventoryItems.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
@@ -7,20 +7,23 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import Spinner from "../Spinner/Spinner";
 
 const MyInventoryItems = () => {
   const [products, setProducts] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const [user, loading, error] = useAuthState(auth);
   let i = 1;
 
   useEffect(() => {
     const email = user.email;
+    setIsLoading(true);
     const url = `http://localhost:5000/myinventory?email=${email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setProducts(data);
+        setIsLoading(false);
       });
   }, [user.email]);
 
@@ -66,6 +69,13 @@ const MyInventoryItems = () => {
           </tr>
         </thead>
         <tbody>
+          {isLoading && (
+            <tr>
+              <td colSpan={7}>
+                <Spinner />
+              </td>
+            </tr>
+          )}
           {products &&
             products.map((product) => (
               <tr key={product._id}>

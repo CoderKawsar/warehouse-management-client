@@ -12,7 +12,7 @@ const Header = () => {
     <Navbar sticky="top" className="header-nav" collapseOnSelect expand="lg">
       <Container>
         <Navbar.Brand to="/" as={Link}>
-          Deposito
+          Stackhouse
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

@@ -26,14 +26,9 @@ const FooterArea = () => {
             <Col lg={3}>
               <h5 className="footer-title">About</h5>
               <p>
-                Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
-                Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut
-                Enim Ad Minim Veniam, Quis Exercitation Ullamco Laboris
+                Best warehouse management system available all over the world.
               </p>
-              <p>
-                Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse
-                Cillum.
-              </p>
+              <p>You will get best safety of your goods and best goods.</p>
             </Col>
             <Col lg={2} className="ps-4">
               <h5 className="footer-title">Quick Link</h5>
@@ -69,11 +64,11 @@ const FooterArea = () => {
               <div className="location">
                 <p>
                   <FontAwesomeIcon icon={faLocationDot} />
-                  123, Lorem Ipsum, Dummy City, FL-12345 USA
+                  123, Andorkilla, Bandarban FL-12345
                 </p>
                 <p>
                   <FontAwesomeIcon icon={faPhone} />
-                  123, Lorem Ipsum, Dummy City, FL-12345 USA
+                  123, Ali kodom, Bandarban FL-12345
                 </p>
                 <p>
                   <FontAwesomeIcon icon={faEnvelope} />
@@ -111,7 +106,7 @@ const FooterArea = () => {
         </Container>
       </div>
       <div className="footer-bottom">
-        &copy; {currentYear} Deposito All Rights Reserved.
+        &copy; {currentYear} Stackhouse All Rights Reserved.
       </div>
     </footer>
   );
