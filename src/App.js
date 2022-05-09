@@ -13,6 +13,7 @@ import ManageInventory from "./components/ManageInventory/ManageInventory";
 import AddInventoryItem from "./components/AddInventoryItem/AddInventoryItem";
 import { ToastContainer } from "react-toastify";
 import MyInventoryItems from "./components/MyInventoryItems/MyInventoryItems";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
       <FooterArea></FooterArea>
       <ToastContainer />
