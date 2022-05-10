@@ -31,7 +31,7 @@ const AddInventoryItem = () => {
       img: productImgUrl,
       adderEmail: user.email,
     };
-    fetch("http://localhost:5000/inventory", {
+    fetch("https://stack0house-warehouse.herokuapp.com/inventory", {
       method: "POST",
       body: JSON.stringify(newProduct),
       headers: {

@@ -8,7 +8,7 @@ import "./InventoryItemDetails.css";
 const InventoryItemDetails = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
-  const url = `http://localhost:5000/inventory/${id}`;
+  const url = `https://stackhouse-warehouse.herokuapp.com/inventory/${id}`;
 
   useEffect(() => {
     fetch(url)
