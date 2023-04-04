@@ -8,7 +8,7 @@ import "./InventoryItemDetails.css";
 const InventoryItemDetails = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
-  const url = `https://stackhouse-warehouse.herokuapp.com/inventory/${id}`;
+  const url = `https://warehouse-management-1d7s.onrender.com/inventory/${id}`;
 
   useEffect(() => {
     fetch(url)

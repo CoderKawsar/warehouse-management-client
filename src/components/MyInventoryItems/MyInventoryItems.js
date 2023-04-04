@@ -18,7 +18,7 @@ const MyInventoryItems = () => {
   useEffect(() => {
     const email = user.email;
     setIsLoading(true);
-    const url = `https://stackhouse-warehouse.herokuapp.com/myinventory?email=${email}`;
+    const url = `https://warehouse-management-1d7s.onrender.com/myinventory?email=${email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -28,7 +28,7 @@ const MyInventoryItems = () => {
   }, [user.email]);
 
   const handleDelete = (id) => {
-    const url = `https://stackhouse-warehouse.herokuapp.com/inventory/${id}`;
+    const url = `https://warehouse-management-1d7s.onrender.com/inventory/${id}`;
     if (window.confirm("Do you really want to Delete?")) {
       fetch(url, {
         method: "DELETE",

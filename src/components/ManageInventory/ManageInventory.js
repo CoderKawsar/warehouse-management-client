@@ -13,7 +13,7 @@ const ManageInventory = () => {
   let i = 1;
 
   const handleDelete = (id) => {
-    const url = `https://stackhouse-warehouse.herokuapp.com/inventory/${id}`;
+    const url = `https://warehouse-management-1d7s.onrender.com/inventory/${id}`;
     if (window.confirm("Do you really want to Delete?")) {
       fetch(url, {
         method: "DELETE",

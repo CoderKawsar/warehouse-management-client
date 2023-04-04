@@ -5,8 +5,8 @@ const useProducts = (numberOfProduct) => {
   const [isLoading, setIsLoading] = useState(false);
   let url;
   if (numberOfProduct) {
-    url = `https://stackhouse-warehouse.herokuapp.com/inventory?numberOfProduct=${numberOfProduct}`;
-  } else url = "https://stackhouse-warehouse.herokuapp.com/inventory";
+    url = `https://warehouse-management-1d7s.onrender.com/inventory?numberOfProduct=${numberOfProduct}`;
+  } else url = "https://warehouse-management-1d7s.onrender.com/inventory";
   useEffect(() => {
     setIsLoading(true);
     fetch(url)
